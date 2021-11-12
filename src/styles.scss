@@ -1,0 +1,147 @@
+// --------------------------
+// GOOGLE FONT
+// --------------------------
+@import "node_modules/sass-google-fonts/src/GoogleFonts.scss";
+// include google font
+
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&display=swap");
+
+// --------------------------
+// VARIABLES
+// --------------------------
+$maincolor: rgb(255, 255, 255);
+$contrastcolor: rgb(252, 151, 0);
+$fontfamily: "Balsamiq Sans", cursive;
+
+@mixin white-text-orange-bg {
+  color: $contrastcolor;
+  background-color: $maincolor;
+  font-family: $fontfamily;
+}
+
+@mixin orange-test-white-bg {
+  color: $maincolor;
+  background-color: $contrastcolor;
+}
+
+@mixin google-font {
+  font-family: "Balsamiq Sans", cursive;
+}
+
+// --------------------------
+// HTML
+// --------------------------
+
+html {
+  background-color: rgb(255, 244, 83);
+}
+
+// --------------------------
+// Header
+// --------------------------
+
+nav {
+  @include white-text-orange-bg;
+  display: flex;
+  justify-content: center;
+
+  a {
+    @include white-text-orange-bg;
+    div {
+      margin: 10px;
+      font-size: 2.5em;
+    }
+  }
+}
+
+// --------------------------
+// Form
+// --------------------------
+
+section,
+div {
+  form {
+      margin-top: 5%;
+    border: 3px solid black;
+    border-radius: 25px;
+    width: 350px;
+    height: 250px;
+    input {
+      display: flex;
+      justify-content: center;
+      @include white-text-orange-bg;
+      padding: 10px;
+      font-size: 1.1em;
+      margin: 10px;
+      border-radius: 25px;
+
+      &[type="submit"]:hover {
+        @include orange-test-white-bg;
+      }
+    }
+  }
+}
+
+// --------------------------
+// button
+// --------------------------
+
+button#delete {
+  @include white-text-orange-bg;
+  display: block;
+  margin: auto;
+  font-size: 1.3em;
+  padding: 10px;
+}
+
+// --------------------------
+// images
+// --------------------------
+
+img {
+  width: 300px;
+  height: 300px;
+  border-radius: 25px;
+  object-fit: cover;
+  box-shadow: 10px 10px rgb(252, 155, 11);
+}
+
+// --------------------------
+// Index h1, h3
+// --------------------------
+.queso-name {
+  @include google-font;
+  color: red;
+  font-size: 2em;
+}
+.queso-origin {
+  @include google-font;
+  color: gray;
+  font-size: 1.5em;
+}
+// --------------------------
+// Show h1, h3
+// --------------------------
+
+.h1-show {
+    @include google-font;
+  color: red;
+  font-size: 2em;
+}
+.h2-show {
+    @include google-font;
+  color: gray;
+  font-size: 1.5em;
+}
+
+// --------------------------
+// button
+// --------------------------
+
+.delete {
+    @include white-text-orange-bg;
+    padding: 10px;
+    font-size: 1em;
+    margin: 10px;
+    border-radius: 25px;
+  }
